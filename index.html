@@ -563,6 +563,15 @@
       display: flex; align-items: center; gap: 6px;
     }
     .vendor-fact::before { content: '✓'; }
+    .vendor-competitor {
+      font-size: 12px; font-weight: 600;
+      display: flex; align-items: center; gap: 6px;
+      margin-top: 6px;
+    }
+    .vendor-competitor.on-competitor { color: var(--amber); }
+    .vendor-competitor.on-competitor::before { content: '⚡'; font-size: 10px; }
+    .vendor-competitor.no-competitor { color: var(--green-mid); }
+    .vendor-competitor.no-competitor::before { content: '○'; font-size: 10px; }
     .vendor-tag {
       display: inline-block;
       font-size: 10px; font-weight: 600;
@@ -1024,21 +1033,24 @@
           <div class="vendor-logo-wrap">🌿</div>
           <div class="vendor-name">Little Farms</div>
           <p class="vendor-desc">Premium produce and clean-label pantry goods, sourced with full supply-chain transparency. Singapore's most trusted organic grocer.</p>
-          <div class="vendor-fact">20–30 min delivery, islandwide</div>
+          <div class="vendor-fact">~15–20% of the premium/organic niche</div>
+          <div class="vendor-competitor on-competitor">Currently on GrabMart, otherwise D2C</div>
           <div class="vendor-tag tag-pandamart">pandamart</div>
         </div>
         <div class="vendor-card">
           <div class="vendor-logo-wrap">🫙</div>
           <div class="vendor-name">Scoop Wholefoods</div>
-          <p class="vendor-desc">Bulk whole foods and zero-waste staples for the intentional pantry. Singapore's leading bulk/wholefood destination, now on delivery.</p>
-          <div class="vendor-fact">Zero packaging waste range</div>
+          <p class="vendor-desc">Bulk whole foods and zero-waste staples for the intentional pantry. Singapore's leading bulk/wholefood destination.</p>
+          <div class="vendor-fact">Leading bulk/zero-waste health pantry</div>
+          <div class="vendor-competitor no-competitor">Not on any delivery platform — strictly offline &amp; D2C app</div>
           <div class="vendor-tag tag-pandamart">pandamart</div>
         </div>
         <div class="vendor-card">
           <div class="vendor-logo-wrap">🥩</div>
           <div class="vendor-name">Sasha's Fine Foods</div>
           <p class="vendor-desc">Grass-fed, pasture-raised, and wild-caught proteins with full traceability. Ethical meats and vegetables, direct from trusted farms.</p>
-          <div class="vendor-fact">Fully traceable, ethical sourcing</div>
+          <div class="vendor-fact">Leader in traceable, ethical meats &amp; veg</div>
+          <div class="vendor-competitor on-competitor">On Deliveroo (small range) — primarily D2C</div>
           <div class="vendor-tag tag-pandamart">pandamart</div>
         </div>
       </div>
@@ -1056,14 +1068,16 @@
           <div class="vendor-logo-wrap">🌾</div>
           <div class="vendor-name">City Farm</div>
           <p class="vendor-desc">Pioneer in certified organic retail. Fresh vegetables grown within 80km of Istanbul, harvested to order for true farm-to-door freshness.</p>
-          <div class="vendor-fact">Certified organic, harvested to order</div>
+          <div class="vendor-fact">Pioneer in certified organic retail</div>
+          <div class="vendor-competitor on-competitor">Currently on Getir / Migros Hemen</div>
           <div class="vendor-tag tag-yemek">yemeksepeti</div>
         </div>
         <div class="vendor-card">
           <div class="vendor-logo-wrap">🫒</div>
           <div class="vendor-name">Taze Direkt</div>
           <p class="vendor-desc">Top premium organic e-commerce with seasonal sourcing and no cold-chain shortcuts. Farm-to-door freshness, delivered express.</p>
-          <div class="vendor-fact">Seasonal sourcing, no cold-chain shortcuts</div>
+          <div class="vendor-fact">Top premium/organic e-commerce (~25% share)</div>
+          <div class="vendor-competitor on-competitor">Own logistics only — owned by Migros</div>
           <div class="vendor-tag tag-yemek">yemeksepeti</div>
         </div>
       </div>
@@ -1080,15 +1094,25 @@
         <div class="vendor-card">
           <div class="vendor-logo-wrap">🌱</div>
           <div class="vendor-name">BMS Organics</div>
-          <p class="vendor-desc">Malaysia's largest offline organic retail chain, now fully on-platform. The brand health-conscious Malaysian households have trusted for over 20 years.</p>
-          <div class="vendor-fact">20+ years of organic retail trust</div>
+          <p class="vendor-desc">Malaysia's largest offline organic retail chain. The brand health-conscious Malaysian households have trusted for over 20 years.</p>
+          <div class="vendor-fact">Largest offline organic retail chain</div>
+          <div class="vendor-competitor on-competitor">Currently GrabMart's primary partner</div>
           <div class="vendor-tag tag-pandamart">pandamart</div>
         </div>
         <div class="vendor-card">
           <div class="vendor-logo-wrap">🥜</div>
           <div class="vendor-name">Signature Market</div>
           <p class="vendor-desc">~35% share of Malaysia's online healthy snacking market. Health snacks and superfoods built for the everyday Malaysian household.</p>
-          <div class="vendor-fact">#1 online healthy snacking brand MY</div>
+          <div class="vendor-fact">~35% share of online healthy snacking</div>
+          <div class="vendor-competitor no-competitor">Pure-play D2C e-commerce — not on any delivery platform</div>
+          <div class="vendor-tag tag-pandamart">pandamart</div>
+        </div>
+        <div class="vendor-card">
+          <div class="vendor-logo-wrap">🌾</div>
+          <div class="vendor-name">TM Organic Farms</div>
+          <p class="vendor-desc">Leader in farm-to-table subscription boxes. Certified organic produce delivered directly from their own farms — a loyal base of health-driven subscribers.</p>
+          <div class="vendor-fact">Leader in "Farm-to-Table" subscriptions</div>
+          <div class="vendor-competitor no-competitor">Subscription model only — not on any delivery platform</div>
           <div class="vendor-tag tag-pandamart">pandamart</div>
         </div>
       </div>
@@ -1105,15 +1129,17 @@
         <div class="vendor-card">
           <div class="vendor-logo-wrap">🌿</div>
           <div class="vendor-name">Healthy Options</div>
-          <p class="vendor-desc">The Philippines' leading health food retail chain. Trusted source for organic, natural, and specialty health products across Metro Manila.</p>
-          <div class="vendor-fact">Leading health retail brand in PH</div>
+          <p class="vendor-desc">Dominant leader in the Philippine health niche with ~60% of the market. The country's most trusted source for organic, natural, and specialty health products.</p>
+          <div class="vendor-fact">~60% of the health niche in PH</div>
+          <div class="vendor-competitor no-competitor">Own app only — actively avoids all aggregators</div>
           <div class="vendor-tag tag-pandamart">pandamart</div>
         </div>
         <div class="vendor-card">
           <div class="vendor-logo-wrap">🥗</div>
-          <div class="vendor-name">The Wholesome Table</div>
-          <p class="vendor-desc">Farm-to-table restaurant brand with a growing grocery and pantry line — whole, natural, and minimally processed foods built for health-minded Filipino families.</p>
-          <div class="vendor-fact">Clean-label grocery range</div>
+          <div class="vendor-name">Real Food</div>
+          <p class="vendor-desc">Top curated organic and local boutique in the Philippines. Carefully sourced produce and pantry items, with a loyal following among health-conscious Filipinos.</p>
+          <div class="vendor-fact">Top curated organic/local boutique</div>
+          <div class="vendor-competitor on-competitor">Currently on GrabMart</div>
           <div class="vendor-tag tag-pandamart">pandamart</div>
         </div>
       </div>
@@ -1124,21 +1150,31 @@
       <div class="market-intro">
         <div class="gap-badge">–2 pts vs. Mathem · Target market</div>
         <h3>Sweden — foodora market</h3>
-        <p>Swedes set the bar for healthy grocery expectations. We're building to meet it.</p>
+        <p>Swedes set the bar for healthy grocery expectations. We propose to meet it.</p>
       </div>
       <div class="vendors-grid">
         <div class="vendor-card">
+          <div class="vendor-logo-wrap">💊</div>
+          <div class="vendor-name">Apotea</div>
+          <p class="vendor-desc">Sweden's dominant online supplement and health product retailer. The go-to destination for vitamins, supplements, and wellness products with ~40% market share.</p>
+          <div class="vendor-fact">~40% share of online supplement market</div>
+          <div class="vendor-competitor no-competitor">Postal/box delivery only — not on rapid delivery platforms</div>
+          <div class="vendor-tag tag-foodora">foodora market</div>
+        </div>
+        <div class="vendor-card">
           <div class="vendor-logo-wrap">🛒</div>
           <div class="vendor-name">Mathem</div>
-          <p class="vendor-desc">Sweden's leading online-only grocer (~20% total market share), now integrated for same-day delivery. The brand Swedes trust for quality online grocery.</p>
-          <div class="vendor-fact">Sweden's #1 online grocery brand</div>
+          <p class="vendor-desc">Sweden's leading online-only grocer with ~20% of the total grocery market. The brand Swedes trust most for quality online grocery.</p>
+          <div class="vendor-fact">Leader in online-only groceries (~20% total)</div>
+          <div class="vendor-competitor on-competitor">Currently partnered with Wolt for rapid delivery</div>
           <div class="vendor-tag tag-foodora">foodora market</div>
         </div>
         <div class="vendor-card">
           <div class="vendor-logo-wrap">🧺</div>
           <div class="vendor-name">Paradiset</div>
-          <p class="vendor-desc">Stockholm's original organic supermarket. A curated range trusted for over 30 years — high-end boutique organic, now accessible via delivery.</p>
-          <div class="vendor-fact">30+ years of organic trust in Stockholm</div>
+          <p class="vendor-desc">Stockholm's original organic supermarket. A curated range trusted for over 30 years — high-end boutique organic with a loyal in-store following.</p>
+          <div class="vendor-fact">High-end boutique organic focus</div>
+          <div class="vendor-competitor no-competitor">Own physical stores &amp; D2C only</div>
           <div class="vendor-tag tag-foodora">foodora market</div>
         </div>
       </div>
